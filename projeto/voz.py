@@ -24,9 +24,9 @@ async def main(rot_path):
     for i, c in enumerate(rot['cenas']):
         arq = f'audio/{i:02d}.mp3'
         ws = await fala(c['fala'], voz, rate, arq); d = dur(arq)
-        ini = 0.25                                  # respiro antes da fala
+        ini = float(rot.get('ini', 0.12))           # respiro antes da fala
         for w in ws: w['s'] += cur + ini; w['e'] += cur + ini
-        total = ini + d + float(c.get('pausa', 0.4))
+        total = max(ini + d + float(c.get('pausa', rot.get('pausa', 0.15))), float(c.get('min', 0)))
         out.append({'cena': c['cena'], 'start': round(cur, 3), 'dur': round(total, 3), 'selo': c.get('selo'),
                     'audio': arq, 'audio_start': round(cur + ini, 3), 'palavras': ws})
         cur += total

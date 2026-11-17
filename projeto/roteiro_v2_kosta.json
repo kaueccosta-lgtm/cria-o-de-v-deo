@@ -1,0 +1,162 @@
+{
+ "voz": "pt-BR-AntonioNeural",
+ "rate": "+30%",
+ "ini": 0.1,
+ "pausa": 0.12,
+ "etapas": 5,
+ "cenas": [
+  {
+   "cena": "cortando",
+   "fala": "O Léo é barbeiro e vive de cortar cabelo. Cliente ele tem, mas entre um corte e outro, não sobra tempo pra postar.",
+   "selo": {
+    "n": 1,
+    "txt": "O problema"
+   }
+  },
+  {
+   "cena": "tempo_editando",
+   "fala": "Um post bom leva horas. E essas horas ele precisava estar na cadeira.",
+   "selo": {
+    "n": 1,
+    "txt": "O problema"
+   }
+  },
+  {
+   "cena": "cliente_indo",
+   "fala": "Resultado: semanas sem postar, perfil parado, e cliente novo indo parar em outra barbearia.",
+   "selo": {
+    "n": 1,
+    "txt": "O problema"
+   }
+  },
+  {
+   "cena": "espera_celular",
+   "fala": "Até que um dia, esperando um cliente, ele olha o perfil de um concorrente. E tem post todo dia.",
+   "selo": {
+    "n": 2,
+    "txt": "A descoberta"
+   }
+  },
+  {
+   "cena": "rival_chips",
+   "fala": "Um viraliza. Outro traz cliente. Outro só aquece a conta. E tudo junto faz o perfil crescer.",
+   "selo": {
+    "n": 2,
+    "txt": "A descoberta"
+   }
+  },
+  {
+   "cena": "pergunta_tempo",
+   "fala": "Mas como é que ele acha tempo pra isso, no meio da rotina?",
+   "selo": {
+    "n": 2,
+    "txt": "A descoberta"
+   }
+  },
+  {
+   "cena": "kosta_logo",
+   "fala": "Foi aí que o Léo descobriu a Kosta. Uma empresa de criação com inteligência artificial, que faz a sua marca parecer gigante.",
+   "selo": {
+    "n": 3,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "kosta_servicos",
+   "fala": "Criação de conteúdo. Imagens pras redes sociais. Imagens a partir de banco de dados, pra materiais. E vídeo.",
+   "selo": {
+    "n": 3,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "kosta_portfolio",
+   "fala": "Cada projeto nasce do zero. Sob medida pra marca, nunca um pacote pronto.",
+   "selo": {
+    "n": 3,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "kosta_vs_agencia",
+   "fala": "É o que uma agência faria, só que mais rápido e com um valor que cabe no bolso. E ainda ensina o cliente a fazer.",
+   "selo": {
+    "n": 3,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "zap_alinhamento",
+   "fala": "O Léo chamou no WhatsApp, e quem respondeu foi o próprio dono. Conversaram, alinharam tudo, e começaram na mesma semana.",
+   "selo": {
+    "n": 3,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "materiais_banco",
+   "fala": "Ele mandou a planilha de serviços e preços, e a Kosta transformou em tabela de preços, cartaz e promoção.",
+   "selo": {
+    "n": 3,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "entregas",
+   "fala": "E todo dia chegavam três, quatro conteúdos diferentes, prontos pra postar.",
+   "selo": {
+    "n": 4,
+    "txt": "Os resultados"
+   }
+  },
+  {
+   "cena": "curtidas2",
+   "fala": "No começo, dez, quinze curtidas por post. Depois vinte. Depois trinta.",
+   "selo": {
+    "n": 4,
+    "txt": "Os resultados"
+   }
+  },
+  {
+   "cena": "semanas_lux",
+   "fala": "Semana após semana, o perfil só crescia. Na quinta, já era outra barbearia.",
+   "selo": {
+    "n": 4,
+    "txt": "Os resultados"
+   }
+  },
+  {
+   "cena": "tempo_13h",
+   "fala": "Segundo a Active Campaign, pequenas empresas que usam IA ganham, em média, treze horas por semana. E, segundo a Sales Force, noventa e um por cento dizem que a receita aumenta.",
+   "selo": {
+    "n": 4,
+    "txt": "Os resultados"
+   }
+  },
+  {
+   "cena": "viral",
+   "fala": "Até que um post viralizou, e o telefone não parou de tocar.",
+   "selo": {
+    "n": 4,
+    "txt": "Os resultados"
+   }
+  },
+  {
+   "cena": "fila_nova",
+   "fala": "Hoje o Léo tem fila na porta, agenda cheia, e tempo pra fazer o que ama: cortar cabelo.",
+   "selo": {
+    "n": 4,
+    "txt": "Os resultados"
+   }
+  },
+  {
+   "cena": "cta_kosta",
+   "fala": "Quer aparecer todo dia, sem perder tempo? Comenta Kosta.",
+   "selo": {
+    "n": 5,
+    "txt": "Sua vez"
+   },
+   "min": 3.2
+  }
+ ]
+}

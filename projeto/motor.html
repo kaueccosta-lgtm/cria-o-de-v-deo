@@ -4,35 +4,56 @@
 @font-face{font-family:Montserrat;font-weight:800;src:url(fontes/Montserrat-800.woff2)}
 @font-face{font-family:Montserrat;font-weight:900;src:url(fontes/Montserrat-900.woff2)}
 @font-face{font-family:Baloo;font-weight:800;src:url(fontes/Baloo2-800.woff2)}
+@font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;src:url(fontes/Archivo-wdth.woff2)}
+@font-face{font-family:GeistMono;font-weight:500;src:url(fontes/GeistMono-500.woff2)}
+@font-face{font-family:InstrumentSerif;font-style:italic;src:url(fontes/InstrumentSerif-italic.woff2)}
 html,body{margin:0;background:#000;overflow:hidden}
 #stage{position:relative;width:540px;height:960px;overflow:hidden;font-family:Montserrat;white-space:pre-line}
+#cam{position:absolute;inset:0;transform-origin:50% 50%}
 #cena{position:absolute;inset:0}
+#wipe{position:absolute;inset:-4px;z-index:7;will-change:transform}
 #bar{position:absolute;left:24px;right:24px;top:22px;display:flex;gap:6px;z-index:5}
 #bar i{flex:1;height:6px;border-radius:3px;background:#ffffff30;overflow:hidden}#bar i b{display:block;height:100%}
 #selo{position:absolute;left:24px;top:46px;z-index:5;display:flex;gap:10px;align-items:center;background:#0009;border-radius:12px;padding:6px 12px 6px 6px;color:#fff;font:800 15px/1.1 Montserrat;text-transform:uppercase}
 #selo b{background:#DC2626;border-radius:8px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font:400 22px Anton}
 #leg{position:absolute;left:16px;right:16px;top:812px;text-align:center;z-index:6;font:400 50px/1.08 Anton;text-transform:uppercase;color:#fff;-webkit-text-stroke:9px #000;paint-order:stroke fill;text-shadow:0 5px 0 #000}
 #leg .on{color:#FDE047}
-</style></head><body><div id="stage"><div id="bar"></div><div id="selo" style="display:none"></div><div id="cena"></div><div id="leg"></div></div>
-<script src="personagens/personagens.js"></script><script src="cenas/cenas.js"></script><script src="cenas/cenas2.js"></script>
+body.claro #leg{color:#141414;-webkit-text-stroke:9px #EFEBE0;text-shadow:0 5px 0 #EFEBE0;font:800 40px/1.08 Archivo;font-stretch:112%;letter-spacing:-.5px}
+body.claro #leg .on{color:#264466}
+body.claro #selo{background:#141414;color:#EFEBE0;font:500 12px/1.2 GeistMono}body.claro #selo b{background:#264466;font:500 18px GeistMono}
+body.claro #bar i{background:#14141422}
+body.lux #leg{font:800 40px/1.08 Archivo;font-stretch:112%;letter-spacing:-.5px}
+body.lux #selo{background:#EFEBE0;color:#141414;font:500 12px/1.2 GeistMono}body.lux #selo b{background:#264466;color:#fff;font:500 18px GeistMono}
+body.lux #leg .on{color:#9DB8DB}
+</style></head><body><div id="stage"><div id="bar"></div><div id="selo" style="display:none"></div><div id="cam"><div id="cena"></div></div><div id="wipe"></div><div id="leg"></div></div>
+<script src="personagens/personagens.js"></script><script src="personagens/personagens2.js"></script><script src="cenas/cenas.js"></script><script src="cenas/cenas2.js"></script><script src="cenas/cenas3.js"></script>
 <script>
-const TL = window.TL, bar = document.getElementById('bar'), selo = document.getElementById('selo'), cena = document.getElementById('cena'), leg = document.getElementById('leg');
+const TL = window.TL, bar = document.getElementById('bar'), selo = document.getElementById('selo'), cena = document.getElementById('cena'), cam = document.getElementById('cam'), wipe = document.getElementById('wipe'), leg = document.getElementById('leg');
 const CORES = ['#EF4444','#F59E0B','#14B8A6','#A855F7','#3B82F6','#EC4899','#22C55E','#EAB308'];
 const nEt = TL.etapas || 0;
 if (nEt) for (let i = 0; i < nEt; i++) bar.insertAdjacentHTML('beforeend', `<i><b style="background:${CORES[i % 8]};width:0"></b></i>`);
-const palavrasPorBloco = 3;
-function seek(t) {
+let palavrasPorBloco = 3; const WIPE_DUR = .34;
+const easeIO = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+async function seek(t) {
   let c = TL.cenas.find(c => t >= c.start && t < c.start + c.dur) || TL.cenas[TL.cenas.length - 1];
-  const p = t - c.start;
+  const p = t - c.start, m = (typeof META !== 'undefined' && META[c.cena]) || {};
   cena.innerHTML = (CENAS[c.cena] || (() => ''))(p, c.dur);
-  if (c.selo) { selo.style.display = 'flex'; selo.innerHTML = `<b>${c.selo.n}</b><span>${c.selo.txt.replace(' ', '<br>')}</span>`; } else selo.style.display = 'none';
+  // câmera: zoom e deslocamento suaves ao longo da cena
+  const k = Math.min(1, p / c.dur), cz = m.cam || [1, 1.08, 0, 0, 0, 0];
+  cam.style.transform = `translate(${cz[2] + (cz[3] - cz[2]) * k}px,${cz[4] + (cz[5] - cz[4]) * k}px) scale(${cz[0] + (cz[1] - cz[0]) * k})`;
+  // transição: cortina que sai varrendo a tela no início da cena
+  const w = p / WIPE_DUR;
+  if (w < 1 && c !== TL.cenas[0]) { wipe.style.display = 'block'; wipe.style.background = m.wipe || '#141414'; wipe.style.transform = `translateX(${-easeIO(w) * 110}%)`; } else wipe.style.display = 'none';
+  const tema = m.tema || 'cartoon'; palavrasPorBloco = tema === 'cartoon' ? 3 : 2; document.body.className = tema === 'claro' ? 'claro' : tema === 'lux' ? 'lux' : '';
+  if (c.selo && !m.semSelo) { selo.style.display = 'flex'; selo.innerHTML = `<b>${c.selo.n}</b><span>${c.selo.txt.replace(' ', '<br>')}</span>`; } else selo.style.display = 'none';
   if (nEt) { const cur = (c.selo ? c.selo.n : 1) - 1; [...bar.children].forEach((el, i) => { el.firstChild.style.width = (i < cur ? 100 : i === cur ? Math.min(100, ((t - c.start) / c.dur) * 100) : 0) + '%'; }); }
-  // legenda: bloco de 3 palavras com a palavra ativa em amarelo
   const ws = c.palavras || []; let i = ws.findIndex(w => t >= w.s && t < w.e + .08);
   if (i < 0) i = ws.reduce((a, w, k) => (t >= w.s ? k : a), -1);
-  if (i < 0 || t > (ws[ws.length - 1]?.e ?? 0) + .35) { leg.innerHTML = ''; return; }
-  const b0 = Math.floor(i / palavrasPorBloco) * palavrasPorBloco;
-  leg.innerHTML = ws.slice(b0, b0 + palavrasPorBloco).map((w, k) => `<span class="${b0 + k === i ? 'on' : ''}">${w.w}</span>`).join(' ');
+  if (i < 0 || t > (ws[ws.length - 1]?.e ?? 0) + .35) leg.innerHTML = '';
+  else { const b0 = Math.floor(i / palavrasPorBloco) * palavrasPorBloco; leg.innerHTML = ws.slice(b0, b0 + palavrasPorBloco).map((w, k) => `<span class="${b0 + k === i ? 'on' : ''}">${w.w}</span>`).join(' '); }
+  await Promise.all([...cena.querySelectorAll('img')].map(im => im.decode().catch(() => {})));
 }
-window.seek = seek; document.fonts.ready.then(() => { window.pronto = true; seek(0); });
+window.seek = seek;
+const pre = (typeof IMGS !== 'undefined' ? IMGS : []).map(f => new Promise(r => { const im = new Image(); im.onload = im.onerror = r; im.src = f; }));
+Promise.all([document.fonts.ready, ...pre]).then(() => seek(0)).then(() => { window.pronto = true; });
 </script></body></html>
