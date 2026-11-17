@@ -1,6 +1,19 @@
-{"voz":"pt-BR-AntonioNeural","rate":"+5%","etapas":3,
+{"voz":"pt-BR-AntonioNeural","rate":"+3%","etapas":5,
  "cenas":[
-  {"cena":"barbearia_vazia","fala":"O Léo tem uma barbearia, mas as cadeiras vivem vazias.","selo":{"n":1,"txt":"O problema"}},
-  {"cena":"kosta_chega","fala":"Até que ele conheceu o Kosta.","selo":{"n":2,"txt":"A virada"}},
-  {"cena":"barbearia_cheia","fala":"Hoje a agenda está lotada.","selo":{"n":3,"txt":"O resultado"}}
+  {"cena":"barbearia_ocupada","fala":"O Léo tem uma barbearia. Cliente, ele até tem. O que falta é aparecer na internet.","selo":{"n":1,"txt":"O problema"}},
+  {"cena":"horas_postando","fala":"Ele tenta postar, mas cada post toma horas do dia dele. E essas horas ele precisava estar cortando cabelo.","selo":{"n":1,"txt":"O problema"}},
+  {"cena":"perfil_vazio","fala":"Resultado: semanas sem postar, perfil parado, e cliente novo indo parar em outra barbearia.","selo":{"n":1,"txt":"O problema"}},
+  {"cena":"concorrente_perfil","fala":"Até que um dia, ele resolve dar uma olhada no perfil de um concorrente.","selo":{"n":2,"txt":"A descoberta"}},
+  {"cena":"concorrente_posts","fala":"E percebe uma coisa: tem post todo dia. Um viraliza. Outro traz cliente. Outro só aquece a conta. E juntos, fazem o perfil crescer.","selo":{"n":2,"txt":"A descoberta"}},
+  {"cena":"leo_pensando","fala":"Mas como ele consegue, sem virar refém do celular?","selo":{"n":2,"txt":"A descoberta"}},
+  {"cena":"kosta_empresa","fala":"Foi aí que o Léo descobriu a Kosta, com K. Uma empresa que ajuda pequenos e médios negócios a crescer nas redes sociais, com conteúdo orgânico feito com inteligência artificial.","selo":{"n":3,"txt":"A virada"}},
+  {"cena":"agencia_vs_kosta","fala":"É o que uma agência faria, só que mais rápido e com um valor que cabe no bolso. E ainda ensina o cliente a fazer.","selo":{"n":3,"txt":"A virada"}},
+  {"cena":"contratar","fala":"O Léo contratou a Kosta sozinho, em poucos cliques.","selo":{"n":3,"txt":"A virada"}},
+  {"cena":"pedido_chat","fala":"Pediu o que precisava, e a Kosta começou no mesmo dia.","selo":{"n":3,"txt":"A virada"}},
+  {"cena":"posts_do_dia","fala":"Todo dia, a Kosta mandava três, quatro conteúdos diferentes: reels, carrossel, stories e foto. Tudo pronto pra postar.","selo":{"n":4,"txt":"Os resultados"}},
+  {"cena":"curtidas","fala":"No começo, dez, quinze curtidas por post. Depois vinte. Depois trinta.","selo":{"n":4,"txt":"Os resultados"}},
+  {"cena":"semanas","fala":"Semana após semana, o perfil só crescia. Na quinta semana, já era outra barbearia.","selo":{"n":4,"txt":"Os resultados"}},
+  {"cena":"viral","fala":"Até que um post viralizou, e o telefone não parou mais de tocar.","selo":{"n":4,"txt":"Os resultados"}},
+  {"cena":"fila_clientes","fala":"Hoje o Léo tem fila na porta e a agenda cheia. E ele só precisa fazer o que sabe: cortar cabelo.","selo":{"n":4,"txt":"Os resultados"}},
+  {"cena":"cta","fala":"Se o seu negócio também vive sem aparecer, chama a Kosta. Comenta Kosta aqui embaixo.","selo":{"n":5,"txt":"Sua vez"}}
  ]}

@@ -70,7 +70,7 @@ function notificacao(txt, y, p, t0 = 0) {
     `<div style="display:flex;gap:12px;align-items:center;background:#F9FAFB;border-radius:20px;padding:14px 18px;box-shadow:0 10px 24px #0007;font:800 21px/1.15 Montserrat;color:#111"><div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#2DD4BF,#0EA5A4);color:#7C2D12;font:400 28px Anton;display:flex;align-items:center;justify-content:center">K</div><div>${txt}</div></div>`);
 }
 function titulo(txt, cor = '#fff', y = 120, size = 54) {
-  return abs(`left:20px;right:20px;top:${y}px;text-align:center;font:400 ${size}px/1.05 Anton;color:${cor};text-transform:uppercase;text-shadow:0 4px 0 #0007`, txt);
+  return abs(`left:20px;right:20px;top:${Math.max(y, 104)}px;text-align:center;font:400 ${size}px/1.05 Anton;color:${cor};text-transform:uppercase;text-shadow:0 4px 0 #0007`, txt);
 }
 
 // ---------- Cenas ----------
