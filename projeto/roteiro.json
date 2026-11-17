@@ -6,18 +6,52 @@
  "etapas": 5,
  "cenas": [
   {
-   "cena": "cortando",
-   "fala": "O Léo é barbeiro e vive de cortar cabelo. Cliente ele tem, mas entre um corte e outro, não sobra tempo pra postar.",
+   "cena": "gancho",
+   "fala": "Ele usava IA todo dia, e mesmo assim, perdia cliente.",
    "selo": {
     "n": 1,
-    "txt": "O problema"
+    "txt": "O começo"
+   },
+   "ini": 0.05,
+   "min": 2.8
+  },
+  {
+   "cena": "aluga_espaco",
+   "fala": "O Léo sonhava com a própria barbearia. Até que conseguiu alugar um espaço, e abriu as portas.",
+   "selo": {
+    "n": 1,
+    "txt": "O começo"
+   }
+  },
+  {
+   "cena": "cortando",
+   "fala": "Os primeiros clientes chegaram, e ele passava o dia cortando cabelo.",
+   "selo": {
+    "n": 1,
+    "txt": "O começo"
+   }
+  },
+  {
+   "cena": "ia_pesquisa",
+   "fala": "Fora da cadeira, o Léo era fã de IA. Usava pra pesquisar produto, tirar dúvida, ter ideia.",
+   "selo": {
+    "n": 1,
+    "txt": "O começo"
+   }
+  },
+  {
+   "cena": "boom_ia",
+   "fala": "Só que o boom da IA estava em todo lugar, e ele sentia que dava pra fazer mais. Só não sabia como.",
+   "selo": {
+    "n": 1,
+    "txt": "O começo"
    }
   },
   {
    "cena": "tempo_editando",
-   "fala": "Um post bom leva horas. E essas horas ele precisava estar na cadeira.",
+   "fala": "Enquanto isso, postar dava trabalho. Um post bom leva horas, e essas horas ele precisava estar na cadeira.",
    "selo": {
-    "n": 1,
+    "n": 2,
     "txt": "O problema"
    }
   },
@@ -25,37 +59,37 @@
    "cena": "cliente_indo",
    "fala": "Resultado: semanas sem postar, perfil parado, e cliente novo indo parar em outra barbearia.",
    "selo": {
-    "n": 1,
+    "n": 2,
     "txt": "O problema"
    }
   },
   {
    "cena": "espera_celular",
-   "fala": "Até que um dia, esperando um cliente, ele olha o perfil de um concorrente. E tem post todo dia.",
+   "fala": "Até que um dia, esperando um cliente, ele olhou o perfil de um concorrente. E tinha post todo dia.",
    "selo": {
     "n": 2,
-    "txt": "A descoberta"
+    "txt": "O problema"
    }
   },
   {
    "cena": "rival_chips",
-   "fala": "Um viraliza. Outro traz cliente. Outro só aquece a conta. E tudo junto faz o perfil crescer.",
+   "fala": "Um viralizava. Outro trazia cliente. Outro só aquecia a conta.",
    "selo": {
     "n": 2,
-    "txt": "A descoberta"
+    "txt": "O problema"
    }
   },
   {
    "cena": "pergunta_tempo",
-   "fala": "Mas como é que ele acha tempo pra isso, no meio da rotina?",
+   "fala": "Foi aí que veio a pergunta: como usar a IA no marketing da minha barbearia, sem perder tempo na rotina?",
    "selo": {
     "n": 2,
-    "txt": "A descoberta"
+    "txt": "O problema"
    }
   },
   {
    "cena": "kosta_logo",
-   "fala": "Foi aí que o Léo descobriu a Kosta. Uma empresa de criação com inteligência artificial, que faz a sua marca parecer gigante.",
+   "fala": "A resposta foi a Kosta. Uma empresa de criação com inteligência artificial, que faz a sua marca parecer gigante.",
    "selo": {
     "n": 3,
     "txt": "A Kosta"
@@ -63,7 +97,7 @@
   },
   {
    "cena": "kosta_servicos",
-   "fala": "Criação de conteúdo. Imagens pras redes sociais. Imagens a partir de banco de dados, pra materiais. E vídeo.",
+   "fala": "Criação de conteúdo. Imagens pras redes. Imagens a partir de banco de dados, pra materiais. E vídeo.",
    "selo": {
     "n": 3,
     "txt": "A Kosta"
@@ -120,14 +154,6 @@
   {
    "cena": "semanas_lux",
    "fala": "Semana após semana, o perfil só crescia. Na quinta, já era outra barbearia.",
-   "selo": {
-    "n": 4,
-    "txt": "Os resultados"
-   }
-  },
-  {
-   "cena": "tempo_13h",
-   "fala": "Segundo a Active Campaign, pequenas empresas que usam IA ganham, em média, treze horas por semana. E, segundo a Sales Force, noventa e um por cento dizem que a receita aumenta.",
    "selo": {
     "n": 4,
     "txt": "Os resultados"
