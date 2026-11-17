@@ -1,0 +1,6 @@
+{"voz":"pt-BR-AntonioNeural","rate":"+5%","etapas":3,
+ "cenas":[
+  {"cena":"barbearia_vazia","fala":"O Léo tem uma barbearia, mas as cadeiras vivem vazias.","selo":{"n":1,"txt":"O problema"}},
+  {"cena":"kosta_chega","fala":"Até que ele conheceu o Kosta.","selo":{"n":2,"txt":"A virada"}},
+  {"cena":"barbearia_cheia","fala":"Hoje a agenda está lotada.","selo":{"n":3,"txt":"O resultado"}}
+ ]}
