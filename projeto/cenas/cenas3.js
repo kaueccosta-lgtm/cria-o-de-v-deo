@@ -124,7 +124,7 @@ CENAS.zap_alinhamento = (p, d) => {
   const fase2 = p > d * .52;
   const chat = `<div style="padding:12px;font-family:Montserrat">
     <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px"><div style="width:34px;height:34px;border-radius:50%;background:#141414;color:#EFEBE0;display:flex;align-items:center;justify-content:center;font:900 16px Archivo;font-stretch:125%">K</div><div style="color:#fff;font:800 15px Montserrat">Kosta <span style="color:#34D399;font-size:11px">● online</span></div></div>
-    <div style="${pop(p, .2)};transform-origin:right;background:#005C4B;color:#fff;border-radius:14px;padding:9px 11px;font:700 14px/1.25 Montserrat;margin:0 0 9px 46px">Oi! Vi o site de vocês. Quero crescer na internet.</div>
+    <div style="${pop(p, .2)};transform-origin:right;background:#005C4B;color:#fff;border-radius:14px;padding:9px 11px;font:700 14px/1.25 Montserrat;margin:0 0 9px 46px">Oi! Um cliente meu indicou vocês.</div>
     <div style="${pop(p, 1.3)};transform-origin:left;background:#1F2C34;color:#fff;border-radius:14px;padding:9px 11px;font:700 14px/1.25 Montserrat;margin:0 46px 9px 0">Oi, Léo! Eu sou o dono da Kosta. Me conta da barbearia e do que você precisa.</div>
     <div style="${pop(p, 2.4)};transform-origin:right;background:#005C4B;color:#fff;border-radius:14px;padding:9px 11px;font:700 14px/1.25 Montserrat;margin:0 0 9px 70px">Estilo, público, horários…</div></div>`;
   const itens = ['Conversa direta com o dono', 'Estilo e público da barbearia', 'Plano sob medida', 'Início: esta semana'];

@@ -6,173 +6,104 @@
  "etapas": 5,
  "cenas": [
   {
-   "cena": "gancho",
-   "fala": "Ele usava IA todo dia, e mesmo assim, perdia cliente.",
+   "cena": "gancho_cliente",
+   "fala": "Um cliente sentou na cadeira e perguntou: Léo, cadê o Instagram da sua barbearia?",
    "selo": {
     "n": 1,
-    "txt": "O começo"
+    "txt": "O convite"
    },
    "ini": 0.05,
-   "min": 2.8
+   "min": 3.4
   },
   {
-   "cena": "aluga_espaco",
-   "fala": "O Léo sonhava com a própria barbearia. Até que conseguiu alugar um espaço, e abriu as portas.",
+   "cena": "perfil_parado",
+   "fala": "O Léo travou. Perfil parado, semanas sem postar. Cortar ele sabia. Divulgar, não sobrava tempo.",
    "selo": {
     "n": 1,
-    "txt": "O começo"
+    "txt": "O convite"
    }
   },
   {
-   "cena": "cortando",
-   "fala": "Os primeiros clientes chegaram, e ele passava o dia cortando cabelo.",
+   "cena": "cliente_conta",
+   "fala": "O cliente sorriu e contou: eu uso a Kosta. Eles me mandam material pra divulgar, e ainda me ensinam a fazer meus próprios posts.",
    "selo": {
     "n": 1,
-    "txt": "O começo"
-   }
-  },
-  {
-   "cena": "ia_pesquisa",
-   "fala": "Fora da cadeira, o Léo era fã de IA. Usava pra pesquisar produto, tirar dúvida, ter ideia.",
-   "selo": {
-    "n": 1,
-    "txt": "O começo"
-   }
-  },
-  {
-   "cena": "boom_ia",
-   "fala": "Só que o boom da IA estava em todo lugar, e ele sentia que dava pra fazer mais. Só não sabia como.",
-   "selo": {
-    "n": 1,
-    "txt": "O começo"
-   }
-  },
-  {
-   "cena": "tempo_editando",
-   "fala": "Enquanto isso, postar dava trabalho. Um post bom leva horas, e essas horas ele precisava estar na cadeira.",
-   "selo": {
-    "n": 2,
-    "txt": "O problema"
-   }
-  },
-  {
-   "cena": "cliente_indo",
-   "fala": "Resultado: semanas sem postar, perfil parado, e cliente novo indo parar em outra barbearia.",
-   "selo": {
-    "n": 2,
-    "txt": "O problema"
-   }
-  },
-  {
-   "cena": "espera_celular",
-   "fala": "Até que um dia, esperando um cliente, ele olhou o perfil de um concorrente. E tinha post todo dia.",
-   "selo": {
-    "n": 2,
-    "txt": "O problema"
-   }
-  },
-  {
-   "cena": "rival_chips",
-   "fala": "Um viralizava. Outro trazia cliente. Outro só aquecia a conta.",
-   "selo": {
-    "n": 2,
-    "txt": "O problema"
-   }
-  },
-  {
-   "cena": "pergunta_tempo",
-   "fala": "Foi aí que veio a pergunta: como usar a IA no marketing da minha barbearia, sem perder tempo na rotina?",
-   "selo": {
-    "n": 2,
-    "txt": "O problema"
+    "txt": "O convite"
    }
   },
   {
    "cena": "kosta_logo",
-   "fala": "A resposta foi a Kosta. Uma empresa de criação com inteligência artificial, que faz a sua marca parecer gigante.",
+   "fala": "A Kosta é uma empresa de criação com inteligência artificial. Sob medida, e mais acessível que uma agência.",
    "selo": {
-    "n": 3,
+    "n": 2,
     "txt": "A Kosta"
    }
   },
   {
    "cena": "kosta_servicos",
-   "fala": "Criação de conteúdo. Imagens pras redes. Imagens a partir de banco de dados, pra materiais. E vídeo.",
+   "fala": "Faz conteúdo, imagens pras redes, imagens a partir de banco de dados, e vídeo.",
    "selo": {
-    "n": 3,
+    "n": 2,
     "txt": "A Kosta"
-   }
-  },
-  {
-   "cena": "kosta_portfolio",
-   "fala": "Cada projeto nasce do zero. Sob medida pra marca, nunca um pacote pronto.",
-   "selo": {
-    "n": 3,
-    "txt": "A Kosta"
-   }
-  },
-  {
-   "cena": "kosta_vs_agencia",
-   "fala": "É o que uma agência faria, só que mais rápido e com um valor que cabe no bolso. E ainda ensina o cliente a fazer.",
-   "selo": {
-    "n": 3,
-    "txt": "A Kosta"
-   }
+   },
+   "min": 6.2
   },
   {
    "cena": "zap_alinhamento",
-   "fala": "O Léo chamou no WhatsApp, e quem respondeu foi o próprio dono. Conversaram, alinharam tudo, e começaram na mesma semana.",
+   "fala": "O Léo chamou no WhatsApp. Quem respondeu foi o próprio dono. Conversaram, alinharam tudo, e começaram na mesma semana.",
    "selo": {
-    "n": 3,
-    "txt": "A Kosta"
-   }
-  },
-  {
-   "cena": "materiais_banco",
-   "fala": "Ele mandou a planilha de serviços e preços, e a Kosta transformou em tabela de preços, cartaz e promoção.",
-   "selo": {
-    "n": 3,
+    "n": 2,
     "txt": "A Kosta"
    }
   },
   {
    "cena": "entregas",
-   "fala": "E todo dia chegavam três, quatro conteúdos diferentes, prontos pra postar.",
+   "fala": "Em poucos dias, chegaram os primeiros materiais, prontos pra postar.",
    "selo": {
-    "n": 4,
-    "txt": "Os resultados"
+    "n": 3,
+    "txt": "Passo a passo"
    }
   },
   {
-   "cena": "curtidas2",
-   "fala": "No começo, dez, quinze curtidas por post. Depois vinte. Depois trinta.",
+   "cena": "passo_prompt",
+   "fala": "Aí veio o passo a passo. Primeiro: descrever a ideia, o prompt. Segundo: a IA gera a imagem.",
+   "selo": {
+    "n": 3,
+    "txt": "Passo a passo"
+   },
+   "min": 7
+  },
+  {
+   "cena": "passo_final",
+   "fala": "Terceiro: ajustar com a identidade da barbearia. Quarto: texto, preço, e publicar.",
+   "selo": {
+    "n": 3,
+    "txt": "Passo a passo"
+   },
+   "min": 7
+  },
+  {
+   "cena": "gestao",
+   "fala": "Hoje o Léo cria os próprios conteúdos, e a Kosta apoia: calendário, legendas e a gestão das redes.",
    "selo": {
     "n": 4,
-    "txt": "Os resultados"
+    "txt": "Resultados"
    }
   },
   {
    "cena": "semanas_lux",
-   "fala": "Semana após semana, o perfil só crescia. Na quinta, já era outra barbearia.",
+   "fala": "Em poucas semanas, o perfil saiu do zero. Curtidas todo dia, e seguidores subindo.",
    "selo": {
     "n": 4,
-    "txt": "Os resultados"
-   }
-  },
-  {
-   "cena": "viral",
-   "fala": "Até que um post viralizou, e o telefone não parou de tocar.",
-   "selo": {
-    "n": 4,
-    "txt": "Os resultados"
+    "txt": "Resultados"
    }
   },
   {
    "cena": "fila_nova",
-   "fala": "Hoje o Léo tem fila na porta, agenda cheia, e tempo pra fazer o que ama: cortar cabelo.",
+   "fala": "E a barbearia? Agenda cheia, e tempo pra cortar cabelo.",
    "selo": {
     "n": 4,
-    "txt": "Os resultados"
+    "txt": "Resultados"
    }
   },
   {
@@ -182,7 +113,7 @@
     "n": 5,
     "txt": "Sua vez"
    },
-   "min": 3.2
+   "min": 3.4
   }
  ]
 }

@@ -1,0 +1,119 @@
+{
+ "voz": "pt-BR-AntonioNeural",
+ "rate": "+30%",
+ "ini": 0.1,
+ "pausa": 0.12,
+ "etapas": 5,
+ "cenas": [
+  {
+   "cena": "gancho_cliente",
+   "fala": "Um cliente sentou na cadeira e perguntou: Léo, cadê o Instagram da sua barbearia?",
+   "selo": {
+    "n": 1,
+    "txt": "O convite"
+   },
+   "ini": 0.05,
+   "min": 3.4
+  },
+  {
+   "cena": "perfil_parado",
+   "fala": "O Léo travou. Perfil parado, semanas sem postar. Cortar ele sabia. Divulgar, não sobrava tempo.",
+   "selo": {
+    "n": 1,
+    "txt": "O convite"
+   }
+  },
+  {
+   "cena": "cliente_conta",
+   "fala": "O cliente sorriu e contou: eu uso a Kosta. Eles me mandam material pra divulgar, e ainda me ensinam a fazer meus próprios posts.",
+   "selo": {
+    "n": 1,
+    "txt": "O convite"
+   }
+  },
+  {
+   "cena": "kosta_logo",
+   "fala": "A Kosta é uma empresa de criação com inteligência artificial. Sob medida, e mais acessível que uma agência.",
+   "selo": {
+    "n": 2,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "kosta_servicos",
+   "fala": "Faz conteúdo, imagens pras redes, imagens a partir de banco de dados, e vídeo.",
+   "selo": {
+    "n": 2,
+    "txt": "A Kosta"
+   },
+   "min": 6.2
+  },
+  {
+   "cena": "zap_alinhamento",
+   "fala": "O Léo chamou no WhatsApp. Quem respondeu foi o próprio dono. Conversaram, alinharam tudo, e começaram na mesma semana.",
+   "selo": {
+    "n": 2,
+    "txt": "A Kosta"
+   }
+  },
+  {
+   "cena": "entregas",
+   "fala": "Em poucos dias, chegaram os primeiros materiais, prontos pra postar.",
+   "selo": {
+    "n": 3,
+    "txt": "Passo a passo"
+   }
+  },
+  {
+   "cena": "passo_prompt",
+   "fala": "Aí veio o passo a passo. Primeiro: descrever a ideia, o prompt. Segundo: a IA gera a imagem.",
+   "selo": {
+    "n": 3,
+    "txt": "Passo a passo"
+   },
+   "min": 7
+  },
+  {
+   "cena": "passo_final",
+   "fala": "Terceiro: ajustar com a identidade da barbearia. Quarto: texto, preço, e publicar.",
+   "selo": {
+    "n": 3,
+    "txt": "Passo a passo"
+   },
+   "min": 7
+  },
+  {
+   "cena": "gestao",
+   "fala": "Hoje o Léo cria os próprios conteúdos, e a Kosta apoia: calendário, legendas e a gestão das redes.",
+   "selo": {
+    "n": 4,
+    "txt": "Resultados"
+   }
+  },
+  {
+   "cena": "semanas_lux",
+   "fala": "Em poucas semanas, o perfil saiu do zero. Curtidas todo dia, e seguidores subindo.",
+   "selo": {
+    "n": 4,
+    "txt": "Resultados"
+   }
+  },
+  {
+   "cena": "fila_nova",
+   "fala": "E a barbearia? Agenda cheia, e tempo pra cortar cabelo.",
+   "selo": {
+    "n": 4,
+    "txt": "Resultados"
+   }
+  },
+  {
+   "cena": "cta_kosta",
+   "fala": "Quer aparecer todo dia, sem perder tempo? Comenta Kosta.",
+   "selo": {
+    "n": 5,
+    "txt": "Sua vez"
+   },
+   "min": 3.4
+  }
+ ]
+}
