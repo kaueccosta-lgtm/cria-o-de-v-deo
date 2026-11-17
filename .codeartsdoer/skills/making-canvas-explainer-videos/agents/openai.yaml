@@ -1,0 +1,4 @@
+interface:
+  display_name: "Canvas Explainer Videos"
+  short_description: "Build narrated explainer videos from pure code, export MP4"
+  default_prompt: "Use $making-canvas-explainer-videos to turn this topic into a 30-second narrated Canvas explainer video and export it to MP4."
