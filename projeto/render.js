@@ -23,8 +23,18 @@ const N = Math.ceil(TL.total * FPS);
     }
   }));
   await br.close(); console.log(`\rquadros ${N}/${N}`);
-  const ins = [], fil = []; TL.cenas.forEach((c, i) => { ins.push('-i', c.audio); fil.push(`[${i + 1}:a]adelay=${Math.round(c.audio_start * 1000)}|${Math.round(c.audio_start * 1000)}[a${i}]`); });
-  const mix = fil.join(';') + ';' + TL.cenas.map((_, i) => `[a${i}]`).join('') + `amix=inputs=${TL.cenas.length}:normalize=0:dropout_transition=0[a]`;
+  // áudio: voz + efeitos + trilha
+  if (!fs.existsSync('audio/music.wav')) spawnSync('python3', ['sfx.py'], { stdio: 'inherit' });
+  const SFX = { v_gancho: [[1.15, 'thud']], r_crise: [[.25, 'pop'], [1.5, 'pop'], [2.2, 'thud']], r_conta: [[2.0, 'pop'], [2.6, 'pop'], [3.2, 'pop'], [4.2, 'ding']],
+    r_contrata: [[1.95, 'thud'], [2.4, 'pop'], [2.9, 'pop'], [3.4, 'pop'], [3.5, 'ding']], r_diario: [[.5, 'ding'], [1.1, 'ding'], [1.7, 'ding'], [2.3, 'ding'], [2.9, 'ding']],
+    r_clientepost: [[2.0, 'ding'], [2.2, 'pop']], r_dono: [[.5, 'pop'], [1.4, 'pop'], [2.3, 'pop']], r_mais: [[.3, 'pop'], [1.8, 'pop'], [3.0, 'thud']], r_cta: [[2.2, 'pop']], r_perfil: [[1.2, 'pop'], [2.4, 'pop']] };
+  const evs = [];
+  TL.cenas.forEach((c, i) => { evs.push([`audio/${c.audio.split('/').pop()}`, c.audio_start, 1.0]); if (i > 0) evs.push(['audio/sfx_whoosh.wav', c.start - .04, .55]); (SFX[c.cena] || []).forEach(([t, k]) => evs.push([`audio/sfx_${k}.wav`, c.start + t, k === 'thud' ? .8 : .5])); });
+  const ins = [], fil = [];
+  evs.forEach(([f, t, v], i) => { ins.push('-i', f); fil.push(`[${i + 1}:a]adelay=${Math.round(t * 1000)}|${Math.round(t * 1000)},volume=${v}[a${i}]`); });
+  ins.push('-stream_loop', '-1', '-i', 'audio/music.wav'); const mi = evs.length + 1;
+  fil.push(`[${mi}:a]volume=.5,afade=t=in:d=1.5[m]`);
+  const mix = fil.join(';') + ';' + evs.map((_, i) => `[a${i}]`).join('') + `[m]amix=inputs=${evs.length + 1}:normalize=0:dropout_transition=0,afade=t=out:st=${Math.max(0, TL.total - 1.2)}:d=1.2[a]`;
   fs.mkdirSync(path.dirname(out), { recursive: true });
   const r = spawnSync('ffmpeg', ['-y', '-v', 'error', '-framerate', FPS, '-i', `${frames}/f%06d.jpg`, ...ins, '-filter_complex', mix,
     '-map', '0:v', '-map', '[a]', '-t', TL.total, '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', '-preset', 'veryfast', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out], { stdio: 'inherit' });

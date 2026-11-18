@@ -12,8 +12,10 @@ const defsReal = `<svg width="0" height="0" style="position:absolute"><defs>
 </defs></svg>`;
 const sombra = svg => svg.replace(/#E2A878/g, 'url(#gPele)').replace(/#D9A06F/g, 'url(#gPele)').replace(/#B77A53/g, 'url(#gPeleD)').replace(/#F3F4F6/g, 'url(#gCam)').replace(/#1E3A8A/g, 'url(#gAvl)').replace(/#27324A/g, 'url(#gCal)')
   .replace(/#1B1B1F/g, 'url(#gTerno)').replace(/#64748B/g, 'url(#gCapa)').replace(/#141414"(?=\/>)/g, '#141414"');
-const figR = (svg, x, y, w, extra = '') => abs(`left:${x}px;top:${y}px;width:${w}px;filter:drop-shadow(0 ${w * .08}px ${w * .06}px #000a) drop-shadow(0 0 ${w * .05}px #FFB86644);${extra}`, sombra(svg)) +
-  abs(`left:${x + w * .12}px;top:${y + w * 1.77}px;width:${w * .76}px;height:${w * .1}px;border-radius:50%;background:radial-gradient(#000b,#0000 70%)`, '');
+const figR = (svg, x, y, w, extra = '') => { const T = window.T || 0, sway = Math.sin(T * 1.6 + x * .013) * 1.1, br = 1 + Math.sin(T * 2.2 + x * .02) * .012, base = `rotate(${sway}deg) scale(1,${br})`;
+  extra = extra.includes('transform:') ? extra.replace('transform:', `transform:${base} `) : extra + `;transform-origin:50% 100%;transform:${base}`;
+  return abs(`left:${x}px;top:${y}px;width:${w}px;filter:drop-shadow(0 ${w * .08}px ${w * .06}px #000a) drop-shadow(0 0 ${w * .05}px #FFB86644);${extra}`, sombra(svg)) +
+  abs(`left:${x + w * .12}px;top:${y + w * 1.77}px;width:${w * .76}px;height:${w * .1}px;border-radius:50%;background:radial-gradient(#000b,#0000 70%)`, ''); };
 const vinheta = `<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#0000 52%,#000b);pointer-events:none"></div><div style="position:absolute;inset:0;background:linear-gradient(#FFB86618,#0000 40%,#1E3A8A22);mix-blend-mode:overlay;pointer-events:none"></div>`;
 function barbeariaReal(p) {
   const lamp = x => abs(`left:${x - 60}px;top:0;width:120px`, `<div style="position:absolute;left:59px;top:0;width:2px;height:70px;background:#111"></div><div style="position:absolute;left:30px;top:66px;width:60px;height:32px;border-radius:60px 60px 4px 4px;background:linear-gradient(#3A3A3A,#111)"></div>
@@ -26,8 +28,8 @@ function barbeariaReal(p) {
     <div style="position:absolute;left:310px;top:250px;width:180px;height:80px">${frasco(0, 70, '#2F6B8F')}${frasco(34, 56, '#8F2F2F')}${frasco(66, 74, '#C9A227')}${frasco(100, 52, '#2F8F5B')}${frasco(134, 66, '#6B2F8F')}</div>
     <div style="position:absolute;left:436px;top:380px;width:42px;height:200px;border-radius:21px;background:repeating-linear-gradient(135deg,#D9332B 0 22px,#fff 22px 44px,#2956C8 44px 66px);border:5px solid #E5E7EB"><div style="position:absolute;inset:0;border-radius:16px;background:linear-gradient(90deg,#0006,#fff5 38%,#0007)"></div></div>
     ${lamp(90)}${lamp(270)}${lamp(450)}</div>
-  <div style="position:absolute;left:-260px;width:1060px;top:540px;height:760px;transform-origin:50% 0;transform:perspective(380px) rotateX(62deg);background:conic-gradient(#E9E2D2 0 25%,#1A1A1A 0 50%,#E9E2D2 0 75%,#1A1A1A 0) 0 0/100px 100px"></div>
-  <div style="position:absolute;left:0;right:0;top:540px;height:420px;background:linear-gradient(#1E1410,#1E141000 35%,#0008)"></div>`;
+  <div style="position:absolute;left:-260px;width:1060px;top:540px;height:760px;transform-origin:50% 0;transform:perspective(380px) rotateX(62deg);background:linear-gradient(#EFEBE3,#FAF8F4 45%,#E4DFD5)"></div>
+  <div style="position:absolute;left:0;right:0;top:540px;height:420px;background:linear-gradient(#1E1410,#1E141000 18%,#0000)"></div>`;
 }
 const cadeiraReal = (x, y, s = 1.55) => abs(`left:${x}px;top:${y}px;transform:scale(${s});transform-origin:top left;filter:drop-shadow(0 14px 10px #000a)`,
   `<svg width="120" height="130" viewBox="0 0 120 130"><rect x="20" y="0" width="80" height="60" rx="20" fill="url(#gCouro)"/><rect x="8" y="52" width="104" height="34" rx="14" fill="url(#gCouro)"/><rect x="26" y="8" width="68" height="12" rx="6" fill="#fff" opacity=".18"/><rect x="54" y="86" width="12" height="30" fill="url(#gCromo)"/><ellipse cx="60" cy="122" rx="36" ry="8" fill="url(#gCromo)"/></svg>`);

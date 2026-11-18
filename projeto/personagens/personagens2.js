@@ -9,7 +9,8 @@ const bracoSvg = (px, py, a1, a2, cor, pele, ext = '') =>
    <g transform="translate(0 48) rotate(${a2})"><rect x="-12" y="-6" width="24" height="54" rx="12" fill="${cor}"/>${ext}<circle cx="0" cy="52" r="13" fill="${pele}"/></g></g>`;
 
 function pessoa(o = {}) {
-  const { mood = 'normal', bob = 0, olhar = 0, pisca = 0, perna = 0, e = [6, 0], d = [-6, 0], extE = '', extD = '',
+  const T = (typeof window !== 'undefined' && window.T) || 0;
+  const { mood = 'normal', bob = 0, olhar = 0, pisca = 0, perna = 0, e = [6 + 3 * Math.sin(T * 1.8), 2 * Math.sin(T * 2.3)], d = [-6 - 3 * Math.sin(T * 1.8 + 1), 2 * Math.sin(T * 2.1 + 2)], extE = '', extD = '',
     pele = '#E2A878', cabelo = '#2A1F1C', barba = true, oculos = false, camisa = '#F3F4F6', avental = '#1E3A8A', terno = false, calca = '#27324A', gravata = '#7a9bc3' } = o;
   const skin2 = '#C98F5E';
   const brows = mood === 'triste' ? `<path d="M82 74 L100 68 M138 74 L120 68" stroke="${cabelo}" stroke-width="6" stroke-linecap="round"/>`

@@ -1,6 +1,6 @@
 {
  "voz": "pt-BR-AntonioNeural",
- "rate": "+25%",
+ "rate": "+22%",
  "ini": 0.1,
  "pausa": 0.1,
  "etapas": 0,
@@ -13,8 +13,8 @@
   },
   {
    "cena": "r_crise",
-   "fala": "O Léo gelou. Todo mundo usando IA, e ele nem sabia por onde começar.",
-   "min": 4.5
+   "fala": "Era uma tarde comum na barbearia, até o Léo gelar: todo mundo usando IA, e ele nem sabia por onde começar.",
+   "min": 5
   },
   {
    "cena": "r_conta",
@@ -29,11 +29,11 @@
   {
    "cena": "r_contrata",
    "fala": "O Léo contratou ali mesmo, e começaram na mesma semana.",
-   "min": 5
+   "min": 5.8
   },
   {
    "cena": "r_diario",
-   "fala": "Todo dia, o celular do Léo vibrava: post da barbearia publicado.",
+   "fala": "Dia após dia, o celular do Léo vibrava: post da barbearia publicado.",
    "min": 5
   },
   {
@@ -42,13 +42,13 @@
    "min": 6.5
   },
   {
-   "cena": "perfil_cresce",
+   "cena": "r_perfil",
    "fala": "E o perfil foi crescendo aos poucos: dez seguidores novos num dia, trinta no outro.",
    "min": 5.5
   },
   {
    "cena": "r_clientepost",
-   "fala": "Depois de uma semana, um cliente novo sentou na cadeira: Vi o post de vocês e quis conhecer.",
+   "fala": "Uma semana depois, um cliente novo sentou na cadeira e disse: vi o post de vocês e quis conhecer.",
    "min": 5
   },
   {
