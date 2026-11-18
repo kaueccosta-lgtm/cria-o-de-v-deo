@@ -1,0 +1,83 @@
+{
+ "voz": "pt-BR-AntonioNeural",
+ "rate": "+12%",
+ "ini": 0.1,
+ "pausa": 0.2,
+ "etapas": 0,
+ "cenas": [
+  {
+   "cena": "st_gancho",
+   "fala": "Ele cortou o cabelo do bairro inteiro por quarenta anos. E ninguém sabia o nome dele.",
+   "ini": 0.05,
+   "min": 4.2
+  },
+  {
+   "cena": "st_aurelio",
+   "fala": "O Seu Aurélio abria a barbearia às oito, assobiando samba. Nunca postou uma foto. Dizia que celular era coisa de quem não tinha o que fazer."
+  },
+  {
+   "cena": "st_leo",
+   "fala": "O Léo, o aprendiz, era o oposto: falava pelos cotovelos, vivia de celular na mão e pedia tudo pra inteligência artificial."
+  },
+  {
+   "cena": "st_noticia",
+   "fala": "Até que, numa terça-feira, o Léo achou um aviso no balcão: o aluguel tinha dobrado. O Seu Aurélio ia fechar a barbearia.",
+   "rate": "+4%",
+   "pitch": "-2Hz",
+   "min": 5.5
+  },
+  {
+   "cena": "st_marta",
+   "fala": "A Dona Marta, cliente há trinta anos, ouviu tudo e disse: o bairro precisa saber! O Seu Aurélio só deu de ombros.",
+   "min": 5.5
+  },
+  {
+   "cena": "st_ia_noite",
+   "fala": "Naquela noite, o Léo pediu pra IA escrever uma despedida. Em dois minutos, saiu um texto bonito, e completamente vazio.",
+   "min": 6
+  },
+  {
+   "cena": "st_rejeita",
+   "fala": "O Seu Aurélio leu, balançou a cabeça e disse: isso podia ser de qualquer barbearia. Essa não é a minha.",
+   "min": 5.5
+  },
+  {
+   "cena": "st_escuta",
+   "fala": "O Léo guardou o celular e fez o que a IA não podia: sentou do lado do Seu Aurélio e escutou. O primeiro cliente. O casamento da Lúcia. A cadeira vermelha, comprada fiado.",
+   "rate": "+0%",
+   "pitch": "-3Hz",
+   "min": 8.5
+  },
+  {
+   "cena": "st_direcao",
+   "fala": "Com as histórias na mão, o Léo voltou pra IA. Agora ele sabia o que pedir. E o texto que saiu era a cara do Seu Aurélio.",
+   "min": 7
+  },
+  {
+   "cena": "st_noite_post",
+   "fala": "O post foi pro ar de noite. O Seu Aurélio nem quis olhar. Apagou a luz, e foi pra casa.",
+   "rate": "+2%",
+   "pitch": "-2Hz",
+   "min": 6.5
+  },
+  {
+   "cena": "st_fila",
+   "fala": "De manhã, a fila dava a volta no quarteirão. Gente que ele cortou o cabelo quando era criança, trazendo os filhos. A Dona Marta chegou com um bolo.",
+   "min": 7
+  },
+  {
+   "cena": "st_emocao",
+   "fala": "O Seu Aurélio olhou pra fila, tirou os óculos, e demorou pra falar. Pela primeira vez em quarenta anos, o bairro inteiro disse o nome dele.",
+   "rate": "-2%",
+   "pitch": "-4Hz",
+   "min": 8
+  },
+  {
+   "cena": "st_fecho",
+   "fala": "A IA escreveu o post em dois minutos. A história levou quarenta anos. Quem sabia o que dizer era ele.",
+   "rate": "+0%",
+   "pitch": "-3Hz",
+   "min": 8
+  }
+ ]
+}

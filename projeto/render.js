@@ -24,10 +24,14 @@ const N = Math.ceil(TL.total * FPS);
   }));
   await br.close(); console.log(`\rquadros ${N}/${N}`);
   // áudio: voz + efeitos + trilha
-  if (!fs.existsSync('audio/music.wav')) spawnSync('python3', ['sfx.py'], { stdio: 'inherit' });
+  if (!fs.existsSync('audio/sfx_snip.wav')) spawnSync('python3', ['sfx.py'], { stdio: 'inherit' });
   const SFX = { v_gancho: [[1.15, 'thud']], r_crise: [[.25, 'pop'], [1.5, 'pop'], [2.2, 'thud']], r_conta: [[2.0, 'pop'], [2.6, 'pop'], [3.2, 'pop'], [4.2, 'ding']],
     r_contrata: [[1.9, 'thud'], [2.0, 'pop'], [2.4, 'pop'], [2.8, 'pop'], [3.1, 'ding']], r_site: [[.4, 'pop'], [1.0, 'pop'], [1.6, 'pop']], r_diario: [[.5, 'ding'], [1.1, 'ding'], [1.7, 'ding'], [2.3, 'ding'], [2.9, 'ding']],
-    r_clientepost: [[2.0, 'ding'], [2.2, 'pop']], r_dono: [[.5, 'pop'], [1.4, 'pop'], [2.3, 'pop']], r_mais: [[.3, 'pop'], [1.8, 'pop'], [3.0, 'thud']], r_foto: [[.5, 'pop']], r_cta: [[2.2, 'pop']], r_perfil: [[1.2, 'pop'], [2.4, 'pop']] };
+    r_clientepost: [[2.0, 'ding'], [2.2, 'pop']], r_dono: [[.5, 'pop'], [1.4, 'pop'], [2.3, 'pop']], r_mais: [[.3, 'pop'], [1.8, 'pop'], [3.0, 'thud']], r_foto: [[.5, 'pop']], r_cta: [[2.2, 'pop']], r_perfil: [[1.2, 'pop'], [2.4, 'pop']],
+    st_gancho: [[.2, 'snip'], [.7, 'snip'], [1.1, 'snip'], [1.9, 'snip'], [2.4, 'snip'], [3.0, 'snip']], st_aurelio: [[.5, 'snip'], [1.4, 'snip'], [2.3, 'snip'], [3.2, 'snip'], [3.6, 'pop']], st_leo: [[1.6, 'pop'], [2.5, 'pop'], [3.3, 'pop']],
+    st_noticia: [[.8, 'thud']], st_marta: [[.3, 'sino'], [2.1, 'pop']], st_ia_noite: [[.5, 'pop'], [1.6, 'ding'], [3.4, 'thud']], st_rejeita: [[1.2, 'pop'], [3.3, 'pop']],
+    st_escuta: [[1.3, 'pop'], [3.9, 'pop'], [6.5, 'pop']], st_direcao: [[3.2, 'ding']], st_noite_post: [[1.0, 'ding'], [1.8, 'ding'], [2.6, 'ding'], [3.3, 'ding']],
+    st_fila: [[1.2, 'pop'], [2.4, 'pop']], st_emocao: [[3.4, 'pop'], [3.8, 'pop'], [4.2, 'pop']], st_fecho: [[1.0, 'pop'], [3.3, 'thud']] };
   const evs = [];
   TL.cenas.forEach((c, i) => { evs.push([`audio/${c.audio.split('/').pop()}`, c.audio_start, 1.0]); if (i > 0) evs.push(['audio/sfx_whoosh.wav', c.start - .04, .55]); (SFX[c.cena] || []).forEach(([t, k]) => evs.push([`audio/sfx_${k}.wav`, c.start + t, k === 'thud' ? .8 : .5])); });
   const ins = [], fil = [];

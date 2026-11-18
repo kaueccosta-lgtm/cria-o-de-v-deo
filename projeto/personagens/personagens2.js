@@ -11,7 +11,7 @@ const bracoSvg = (px, py, a1, a2, cor, pele, ext = '') =>
 function pessoa(o = {}) {
   const T = (typeof window !== 'undefined' && window.T) || 0;
   const { mood = 'normal', bob = 0, olhar = 0, pisca = 0, perna = 0, e = [6 + 3 * Math.sin(T * 1.8), 2 * Math.sin(T * 2.3)], d = [-6 - 3 * Math.sin(T * 1.8 + 1), 2 * Math.sin(T * 2.1 + 2)], extE = '', extD = '',
-    pele = '#E2A878', cabelo = '#2A1F1C', barba = true, oculos = false, camisa = '#F3F4F6', avental = '#1E3A8A', terno = false, calca = '#27324A', gravata = '#7a9bc3' } = o;
+    pele = '#E2A878', cabelo = '#2A1F1C', barba = true, oculos = false, camisa = '#F3F4F6', avental = '#1E3A8A', terno = false, calca = '#27324A', gravata = '#7a9bc3', coque = false } = o;
   const skin2 = '#C98F5E';
   const brows = mood === 'triste' ? `<path d="M82 74 L100 68 M138 74 L120 68" stroke="${cabelo}" stroke-width="6" stroke-linecap="round"/>`
     : mood === 'surpreso' ? `<path d="M82 62 Q92 54 102 62 M118 62 Q128 54 138 62" stroke="${cabelo}" stroke-width="6" fill="none" stroke-linecap="round"/>`
@@ -29,10 +29,12 @@ function pessoa(o = {}) {
   return `<svg viewBox="0 0 220 400" xmlns="http://www.w3.org/2000/svg" overflow="visible"><g transform="translate(0 ${bob})">
   <g transform="rotate(${perna} 91 272)"><rect x="78" y="272" width="26" height="92" rx="10" fill="${calca}"/><ellipse cx="88" cy="368" rx="22" ry="11" fill="#111827"/></g>
   <g transform="rotate(${-perna} 129 272)"><rect x="116" y="272" width="26" height="92" rx="10" fill="${calca}"/><ellipse cx="130" cy="368" rx="22" ry="11" fill="#111827"/></g>
+  ${coque ? `<path d="M64 236 L156 236 L172 338 L48 338Z" fill="${calca}"/>` : ''}
   ${bracoSvg(70, 172, e[0], e[1], manga, pele, extE)}${corpo}${bracoSvg(150, 172, d[0], d[1], manga, pele, extD)}
   <rect x="96" y="128" width="28" height="30" rx="10" fill="${skin2}"/>
   <circle cx="62" cy="92" r="9" fill="${pele}"/><circle cx="158" cy="92" r="9" fill="${pele}"/><circle cx="110" cy="88" r="52" fill="${pele}"/>
   <path d="M60 86 Q58 36 110 34 Q162 36 160 86 Q150 60 110 58 Q70 60 60 86 Z" fill="${cabelo}"/>
+  ${coque ? `<circle cx="110" cy="28" r="22" fill="${cabelo}"/><path d="M58 80 Q54 130 70 140 L72 96Z M162 80 Q166 130 150 140 L148 96Z" fill="${cabelo}"/>` : ''}
   ${barba ? `<path d="M66 100 Q70 146 110 148 Q150 146 154 100 Q148 126 110 126 Q72 126 66 100 Z" fill="${cabelo}"/>` : ''}
   <ellipse cx="${92 + olhar}" cy="88" rx="5.5" ry="${ey}" fill="#1F1512"/><ellipse cx="${128 + olhar}" cy="88" rx="5.5" ry="${ey}" fill="#1F1512"/>
   ${oculos ? `<circle cx="92" cy="88" r="14" fill="#ffffff22" stroke="#141414" stroke-width="4"/><circle cx="128" cy="88" r="14" fill="#ffffff22" stroke="#141414" stroke-width="4"/><path d="M106 88 H114" stroke="#141414" stroke-width="4"/>` : ''}

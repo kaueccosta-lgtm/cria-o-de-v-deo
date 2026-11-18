@@ -1,70 +1,83 @@
 {
  "voz": "pt-BR-AntonioNeural",
- "rate": "+22%",
+ "rate": "+12%",
  "ini": 0.1,
- "pausa": 0.1,
+ "pausa": 0.2,
  "etapas": 0,
  "cenas": [
   {
-   "cena": "v_gancho",
-   "fala": "Léo, todo mundo já usa IA no negócio. E você?",
+   "cena": "st_gancho",
+   "fala": "Ele cortou o cabelo do bairro inteiro por quarenta anos. E ninguém sabia o nome dele.",
    "ini": 0.05,
-   "min": 3.6
+   "min": 4.2
   },
   {
-   "cena": "r_crise",
-   "fala": "Era uma tarde comum na barbearia, até o Léo gelar: todo mundo usando IA, e ele nem sabia por onde começar.",
-   "min": 0
+   "cena": "st_aurelio",
+   "fala": "O Seu Aurélio abria a barbearia às oito, assobiando samba. Nunca postou uma foto. Dizia que celular era coisa de quem não tinha o que fazer."
   },
   {
-   "cena": "r_conta",
-   "fala": "O cliente explicou: ele tem uma empresa que cria posts com IA, pra gente como o Léo, com negócio pequeno e sem tempo.",
-   "min": 0
+   "cena": "st_leo",
+   "fala": "O Léo, o aprendiz, era o oposto: falava pelos cotovelos, vivia de celular na mão e pedia tudo pra inteligência artificial."
   },
   {
-   "cena": "r_site",
-   "fala": "É a Kosta. Olha o que a gente entrega pros clientes.",
-   "min": 3.8
-  },
-  {
-   "cena": "r_contrata",
-   "fala": "O Léo contratou ali mesmo, e começaram na mesma semana.",
-   "min": 4.4
-  },
-  {
-   "cena": "r_diario",
-   "fala": "Dia após dia, o celular do Léo vibrava: post da barbearia publicado.",
-   "min": 4.5
-  },
-  {
-   "cena": "r_foto",
-   "fala": "O Léo mandou fotos tortas da barbearia, e a Kosta devolveu posts profissionais, com a identidade dele.",
+   "cena": "st_noticia",
+   "fala": "Até que, numa terça-feira, o Léo achou um aviso no balcão: o aluguel tinha dobrado. O Seu Aurélio ia fechar a barbearia.",
+   "rate": "+4%",
+   "pitch": "-2Hz",
    "min": 5.5
   },
   {
-   "cena": "r_perfil",
-   "fala": "E o perfil foi crescendo aos poucos: dez seguidores novos num dia, trinta no outro.",
-   "min": 4.8
+   "cena": "st_marta",
+   "fala": "A Dona Marta, cliente há trinta anos, ouviu tudo e disse: o bairro precisa saber! O Seu Aurélio só deu de ombros.",
+   "min": 5.5
   },
   {
-   "cena": "r_clientepost",
-   "fala": "Uma semana depois, um cliente novo sentou na cadeira e disse: vi o post de vocês e quis conhecer.",
-   "min": 0
+   "cena": "st_ia_noite",
+   "fala": "Naquela noite, o Léo pediu pra IA escrever uma despedida. Em dois minutos, saiu um texto bonito, e completamente vazio.",
+   "min": 6
   },
   {
-   "cena": "r_dono",
-   "fala": "Um mês depois, o dono voltou. E dessa vez foi o Léo quem não parava de falar: já são mais de mil seguidores e a agenda tá cheia!",
-   "min": 0
+   "cena": "st_rejeita",
+   "fala": "O Seu Aurélio leu, balançou a cabeça e disse: isso podia ser de qualquer barbearia. Essa não é a minha.",
+   "min": 5.5
   },
   {
-   "cena": "r_mais",
-   "fala": "O Léo perguntou: dá pra fazer vídeo também? O dono respondeu: dá. E dá pra ir bem mais longe.",
-   "min": 0
+   "cena": "st_escuta",
+   "fala": "O Léo guardou o celular e fez o que a IA não podia: sentou do lado do Seu Aurélio e escutou. O primeiro cliente. O casamento da Lúcia. A cadeira vermelha, comprada fiado.",
+   "rate": "+0%",
+   "pitch": "-3Hz",
+   "min": 8.5
   },
   {
-   "cena": "r_cta",
-   "fala": "E eu nem precisei virar designer. Quer produzir conteúdo assim, e muito mais? Comenta Kosta.",
-   "min": 5.6
+   "cena": "st_direcao",
+   "fala": "Com as histórias na mão, o Léo voltou pra IA. Agora ele sabia o que pedir. E o texto que saiu era a cara do Seu Aurélio.",
+   "min": 7
+  },
+  {
+   "cena": "st_noite_post",
+   "fala": "O post foi pro ar de noite. O Seu Aurélio nem quis olhar. Apagou a luz, e foi pra casa.",
+   "rate": "+2%",
+   "pitch": "-2Hz",
+   "min": 6.5
+  },
+  {
+   "cena": "st_fila",
+   "fala": "De manhã, a fila dava a volta no quarteirão. Gente que ele cortou o cabelo quando era criança, trazendo os filhos. A Dona Marta chegou com um bolo.",
+   "min": 7
+  },
+  {
+   "cena": "st_emocao",
+   "fala": "O Seu Aurélio olhou pra fila, tirou os óculos, e demorou pra falar. Pela primeira vez em quarenta anos, o bairro inteiro disse o nome dele.",
+   "rate": "-2%",
+   "pitch": "-4Hz",
+   "min": 8
+  },
+  {
+   "cena": "st_fecho",
+   "fala": "A IA escreveu o post em dois minutos. A história levou quarenta anos. Quem sabia o que dizer era ele.",
+   "rate": "+0%",
+   "pitch": "-3Hz",
+   "min": 8
   }
  ]
 }

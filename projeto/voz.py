@@ -7,8 +7,8 @@ import asyncio, json, os, subprocess, sys, edge_tts
 def dur(f):
     return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',f]).decode())
 
-async def fala(texto, voz, rate, arq):
-    c = edge_tts.Communicate(texto, voz, rate=rate, boundary='WordBoundary', proxy=os.environ.get('HTTPS_PROXY') or None)
+async def fala(texto, voz, rate, arq, pitch='+0Hz'):
+    c = edge_tts.Communicate(texto, voz, rate=rate, pitch=pitch, boundary='WordBoundary', proxy=os.environ.get('HTTPS_PROXY') or None)
     palavras = []
     with open(arq, 'wb') as f:
         async for e in c.stream():
@@ -23,7 +23,7 @@ async def main(rot_path):
     cur, out = 0.2, []
     for i, c in enumerate(rot['cenas']):
         arq = f'audio/{i:02d}.mp3'
-        ws = await fala(c['fala'], voz, rate, arq); d = dur(arq)
+        ws = await fala(c['fala'], voz, c.get('rate', rate), arq, c.get('pitch', '+0Hz')); d = dur(arq)
         ini = float(c.get('ini', rot.get('ini', 0.12)))   # respiro antes da fala
         for w in ws: w['s'] += cur + ini; w['e'] += cur + ini
         total = max(ini + (ws[-1]['e'] - cur - ini) + 0.4 + float(c.get('pausa', rot.get('pausa', 0.1))), float(c.get('min', 0)))
