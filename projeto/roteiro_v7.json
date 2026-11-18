@@ -1,0 +1,70 @@
+{
+ "voz": "pt-BR-AntonioNeural",
+ "rate": "+22%",
+ "ini": 0.1,
+ "pausa": 0.1,
+ "etapas": 0,
+ "cenas": [
+  {
+   "cena": "v_gancho",
+   "fala": "Léo, todo mundo já usa IA no negócio. E você?",
+   "ini": 0.05,
+   "min": 3.6
+  },
+  {
+   "cena": "r_crise",
+   "fala": "Era uma tarde comum na barbearia, até o Léo gelar: todo mundo usando IA, e ele nem sabia por onde começar.",
+   "min": 0
+  },
+  {
+   "cena": "r_conta",
+   "fala": "O cliente explicou: ele tem uma empresa que cria posts com IA, pra gente como o Léo, com negócio pequeno e sem tempo.",
+   "min": 0
+  },
+  {
+   "cena": "r_site",
+   "fala": "É a Kosta. Olha o que a gente entrega pros clientes.",
+   "min": 3.8
+  },
+  {
+   "cena": "r_contrata",
+   "fala": "O Léo contratou ali mesmo, e começaram na mesma semana.",
+   "min": 4.4
+  },
+  {
+   "cena": "r_diario",
+   "fala": "Dia após dia, o celular do Léo vibrava: post da barbearia publicado.",
+   "min": 4.5
+  },
+  {
+   "cena": "r_foto",
+   "fala": "O Léo mandou fotos tortas da barbearia, e a Kosta devolveu posts profissionais, com a identidade dele.",
+   "min": 5.5
+  },
+  {
+   "cena": "r_perfil",
+   "fala": "E o perfil foi crescendo aos poucos: dez seguidores novos num dia, trinta no outro.",
+   "min": 4.8
+  },
+  {
+   "cena": "r_clientepost",
+   "fala": "Uma semana depois, um cliente novo sentou na cadeira e disse: vi o post de vocês e quis conhecer.",
+   "min": 0
+  },
+  {
+   "cena": "r_dono",
+   "fala": "Um mês depois, o dono voltou. E dessa vez foi o Léo quem não parava de falar: já são mais de mil seguidores e a agenda tá cheia!",
+   "min": 0
+  },
+  {
+   "cena": "r_mais",
+   "fala": "O Léo perguntou: dá pra fazer vídeo também? O dono respondeu: dá. E dá pra ir bem mais longe.",
+   "min": 0
+  },
+  {
+   "cena": "r_cta",
+   "fala": "E eu nem precisei virar designer. Quer produzir conteúdo assim, e muito mais? Comenta Kosta.",
+   "min": 5.6
+  }
+ ]
+}

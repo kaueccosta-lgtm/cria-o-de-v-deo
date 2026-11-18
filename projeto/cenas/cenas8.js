@@ -11,7 +11,7 @@ CENAS.v_gancho = (p, d) => {
     abs(`left:250px;top:340px;width:200px;transform-origin:50% 100%;transform:scale(${1 - sq},${1 + sq * 1.6}) translateY(${imp * -10}px)`, '') +
     figR(leo({ mood: dt > 0 ? 'surpreso' : 'normal', bob: Math.sin(p * 5) * 2, pisca: piscar(p), olhar: -4, e: [20 + imp * 30, -30], d: [-20 - imp * 30, -30] }), 250, 340, 200, `transform-origin:50% 100%;transform:scale(${1 - sq},${1 + sq * 1.6})`) + (dt > 0 ? suor(p, 396, 360) : '');
   return `<div style="position:absolute;inset:0;transform-origin:50% 50%;transform:translate(${shot.x}px,${shot.y}px) scale(${shot.s})">${mundo}</div>` + vinheta +
-    abs(`left:0;right:0;top:100px;text-align:center;font:400 58px/1 Anton;color:#FDE047;text-shadow:0 6px 0 #000;${slam(p, .05)}`, 'TODO MUNDO JÁ USA IA.') +
+    abs(`left:0;right:0;top:100px;text-align:center;font:400 50px/1 Anton;color:#FDE047;text-shadow:0 6px 0 #000;${slam(p, .05)}`, 'TODO MUNDO JÁ USA IA.') +
     abs(`left:0;right:0;top:170px;text-align:center;font:400 124px/1 Anton;color:#F87171;text-shadow:0 7px 0 #000;transform-origin:center;${slam(p, hit, .12)}`, `<div style="transform:translateX(${shake}px) rotate(${shake * .15}deg)">E VOCÊ?</div>`) +
     abs(`inset:0;background:#fff;opacity:${flash}`, '') + (p > 1.7 ? bolha('é… eu…', 330, 340, 130, p, 1.7) : '');
 };

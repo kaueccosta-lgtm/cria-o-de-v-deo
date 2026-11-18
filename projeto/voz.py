@@ -26,7 +26,7 @@ async def main(rot_path):
         ws = await fala(c['fala'], voz, rate, arq); d = dur(arq)
         ini = float(c.get('ini', rot.get('ini', 0.12)))   # respiro antes da fala
         for w in ws: w['s'] += cur + ini; w['e'] += cur + ini
-        total = max(ini + d + float(c.get('pausa', rot.get('pausa', 0.15))), float(c.get('min', 0)))
+        total = max(ini + (ws[-1]['e'] - cur - ini) + 0.4 + float(c.get('pausa', rot.get('pausa', 0.1))), float(c.get('min', 0)))
         out.append({'cena': c['cena'], 'start': round(cur, 3), 'dur': round(total, 3), 'selo': c.get('selo'),
                     'audio': arq, 'audio_start': round(cur + ini, 3), 'palavras': ws})
         cur += total
