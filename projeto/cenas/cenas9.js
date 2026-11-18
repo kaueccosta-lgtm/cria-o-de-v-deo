@@ -1,5 +1,5 @@
 // v5 final: 12 partes no estilo "cartoon com vida" (cortes rápidos, texto que bate, squash & stretch).
-const planos = (p, list) => { let t0 = 0; for (const [t1, s, x, y] of list) { if (p < t1) return { s: s + (p - t0) * .06, x, y }; t0 = t1; } const l = list[list.length - 1]; return { s: l[1] + (p - t0) * .06, x: l[2], y: l[3] }; };
+const planos = (p, list) => { let t0 = 0; for (const [t1, s, x, y] of list) { if (p < t1) return { s: s + Math.min(.07, (p - t0) * .02), x, y }; t0 = t1; } const l = list[list.length - 1]; return { s: l[1] + Math.min(.07, (p - t0) * .02), x: l[2], y: l[3] }; };
 const camR = (inner, sh) => `<div style="position:absolute;inset:0;transform-origin:50% 50%;transform:translate(${sh.x}px,${sh.y}px) scale(${sh.s})">${inner}</div>`;
 const sqz = (p, t0, a = .15) => { const dt = p - t0; return dt > 0 ? a * Math.exp(-dt * 5) * Math.sin(dt * 28) : 0; };
 const sqS = s => `transform-origin:50% 100%;transform:scale(${1 - s},${1 + s * 1.6})`;
