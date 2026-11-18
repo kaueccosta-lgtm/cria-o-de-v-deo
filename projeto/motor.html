@@ -47,9 +47,10 @@ async function seek(t) {
     const pc = TL.cenas[idx - 1], pm = (typeof META !== 'undefined' && META[pc.cena]) || {}; window.T = pc.dur;
     cenaP.innerHTML = (CENAS[pc.cena] || (() => ''))(pc.dur, pc.dur); window.T = p;
     const k = easeIO(w), bl = Math.sin(k * Math.PI) * 7;
+    cam.style.overflow = 'hidden'; camP.style.overflow = 'hidden';
     camP.style.display = 'block'; camP.style.transform = `translateX(${-k * 540}px) ${camT(pm, 1)}`; camP.style.filter = `blur(${bl}px)`;
     cam.style.transform = `translateX(${(1 - k) * 540}px) ${base}`; cam.style.filter = `blur(${bl}px)`;
-  } else { camP.style.display = 'none'; cenaP.innerHTML = ''; cam.style.filter = 'none'; cam.style.transform = base; }
+  } else { cam.style.overflow = 'visible'; camP.style.display = 'none'; cenaP.innerHTML = ''; cam.style.filter = 'none'; cam.style.transform = base; }
   wipe.style.display = 'none';
   const tema = m.tema || 'cartoon'; palavrasPorBloco = tema === 'cartoon' ? 3 : 2; document.body.className = tema === 'claro' ? 'claro' : tema === 'lux' ? 'lux' : '';
   if (c.selo && !m.semSelo) { selo.style.display = 'flex'; selo.innerHTML = `<b>${c.selo.n}</b><span>${c.selo.txt.replace(' ', '<br>')}</span>`; } else selo.style.display = 'none';
@@ -59,6 +60,7 @@ async function seek(t) {
   if (m.semLeg || i < 0 || t > (ws[ws.length - 1]?.e ?? 0) + .35) leg.innerHTML = '';
   else { const b0 = Math.floor(i / palavrasPorBloco) * palavrasPorBloco; leg.innerHTML = ws.slice(b0, b0 + palavrasPorBloco).map((w, k) => `<span class="${b0 + k === i ? 'on' : ''}">${w.w}</span>`).join(' '); }
   await Promise.all([...cena.querySelectorAll('img')].map(im => im.decode().catch(() => {})));
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 }
 window.seek = seek;
 const pre = (typeof IMGS !== 'undefined' ? IMGS : []).map(f => new Promise(r => { const im = new Image(); im.onload = im.onerror = r; im.src = f; }));

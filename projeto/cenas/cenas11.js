@@ -29,7 +29,7 @@ META.r_conta = { cam: [1, 1, 0, 0, 0, 0] };
 
 CENAS.r_site = (p, d) => {
   const R = [['BARBEARIA', 83, 1800], ['RESTAURANTE', 120, 2400], ['PET SHOP', 60, 1500]];
-  return camR(SET(p) + abs('left:-500px;right:-500px;top:-500px;bottom:-500px;background:#000;opacity:.4', '') +
+  return camR(SET(p) + abs('left:-700px;right:-700px;top:-300px;bottom:-300px;background:#000;opacity:.4', '') +
     celBig(150, 105, 240, `<div style="padding:12px;background:#EFEBE0;height:100%"><div style="font:900 26px/1 Archivo;font-stretch:125%;color:#141414;letter-spacing:-.03em">KOSTA</div><div style="font:500 9px GeistMono;color:#264466;letter-spacing:.08em;margin:4px 0 8px">[ RESULTADOS DE CLIENTES ]</div>${R.map((r, i) => cardRes(r, i, p)).join('')}</div>`, -2 + Math.sin(p * 1.5)) +
     figR(leo({ mood: 'surpreso', bob: Math.sin(p * 3) * 2, pisca: piscar(p), olhar: 4 }), 215, 590, 150) + figR(dono({ mood: 'falando', t: p, bob: Math.sin(p * 3 + 1) * 2, pisca: piscar(p + 1), e: [140, -20] }), 370, 590, 150), planos(p, [[Infinity, 1.0, 0, 0]])) + vinheta;
 };
@@ -57,7 +57,7 @@ META.r_diario = { cam: [1, 1, 0, 0, 0, 0] };
 
 CENAS.r_foto = (p, d) => {
   const s = ease((p - .5) / (d * .7)) * 100, crua = `<div style="position:absolute;inset:0;background:linear-gradient(160deg,#6B6B6B,#3A3A3A);overflow:hidden"><svg style="position:absolute;left:70px;top:150px;transform:rotate(8deg)" width="160" height="190" viewBox="0 0 120 130"><rect x="20" y="0" width="80" height="60" rx="20" fill="#7A2A22"/><rect x="8" y="52" width="104" height="34" rx="14" fill="#7A2A22"/><rect x="54" y="86" width="12" height="30" fill="#999"/><ellipse cx="60" cy="122" rx="36" ry="8" fill="#777"/></svg><div style="position:absolute;left:12px;bottom:12px;background:#000a;color:#fff;border-radius:999px;padding:5px 10px;font:500 11px GeistMono">FOTO BASE</div></div>`;
-  return camR(SET(p) + abs('left:-500px;right:-500px;top:-500px;bottom:-500px;background:#000;opacity:.4', '') +
+  return camR(SET(p) + abs('left:-700px;right:-700px;top:-300px;bottom:-300px;background:#000;opacity:.4', '') +
     abs('left:110px;top:110px;width:300px;height:375px;transform:scale(1.12);transform-origin:50% 0;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px #000b', `<div style="position:absolute;inset:0">${crua}</div><div style="position:absolute;inset:0;clip-path:inset(0 ${100 - s}% 0 0)">${posterBase({ frame: 1, logo: 1, head: 1, preco: 1, btn: 1 })}</div><div style="position:absolute;left:${s}%;top:0;bottom:0;width:3px;background:#fff;opacity:${s > 98 ? 0 : 1}"></div>`) +
     figR(leo({ mood: 'feliz', bob: Math.sin(p * 3) * 2, pisca: piscar(p), olhar: 3, d: [-60, -75], extD: celularMao }), 215, 590, 150) + figR(dono({ mood: 'feliz', bob: Math.sin(p * 3 + 1) * 2, pisca: piscar(p + 1), e: [120, -20] }), 370, 590, 150), planos(p, [[Infinity, 1.0, 0, 0]])) + vinheta;
 };
@@ -65,7 +65,7 @@ META.r_foto = { cam: [1, 1, 0, 0, 0, 0] };
 
 CENAS.r_perfil = (p, d) => {
   const steps = [[0, 83, 'SEMANA 1', ''], [1.2, 93, 'SEMANA 2', '+10'], [2.4, 123, 'SEMANA 3', '+30']], cur = steps.filter(s => p >= s[0]).pop();
-  return SET(p) + abs('left:-500px;right:-500px;top:-500px;bottom:-500px;background:#000;opacity:.3', '') +
+  return SET(p) + abs('left:-700px;right:-700px;top:-300px;bottom:-300px;background:#000;opacity:.3', '') +
     celular(200, 110, 240, perfilInsta('@barbearia_leo', Math.min(9, 3 + Math.floor(p * 1.5)), cur[1], 170), Math.sin(p * 1.5)) +
     steps.map(([t0, , lab, plus], i) => abs(`left:14px;top:${130 + i * 86}px;${pop(p, t0, .3)}`, `<div style="background:#EFEBE0;color:#141414;border-radius:12px;padding:8px 12px;font:500 12px GeistMono;letter-spacing:.06em">${lab}<div style="font:900 24px Archivo;font-stretch:120%;color:#264466">${plus || '83'}</div></div>`)).join('') +
     [...Array(8)].map((_, i) => { const ph = (p * 90 + i * 60) % 400; return abs(`left:${210 + (i * 47) % 200}px;top:${700 - ph}px;font-size:${20 + i % 3 * 7}px;color:#F43F5E;opacity:${clamp(1 - ph / 400)}`, '♥'); }).join('') +
