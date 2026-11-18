@@ -1,119 +1,70 @@
 {
  "voz": "pt-BR-AntonioNeural",
- "rate": "+30%",
+ "rate": "+25%",
  "ini": 0.1,
- "pausa": 0.12,
- "etapas": 5,
+ "pausa": 0.1,
+ "etapas": 0,
  "cenas": [
   {
-   "cena": "gancho_cliente",
-   "fala": "Um cliente sentou na cadeira e perguntou: Léo, cadê o Instagram da sua barbearia?",
-   "selo": {
-    "n": 1,
-    "txt": "O convite"
-   },
+   "cena": "v_gancho",
+   "fala": "Léo, todo mundo já usa IA no negócio. E você?",
    "ini": 0.05,
-   "min": 3.4
+   "min": 3.6
   },
   {
-   "cena": "perfil_parado",
-   "fala": "O Léo travou. Perfil parado, semanas sem postar. Cortar ele sabia. Divulgar, não sobrava tempo.",
-   "selo": {
-    "n": 1,
-    "txt": "O convite"
-   }
+   "cena": "r_crise",
+   "fala": "O Léo gelou. Todo mundo usando IA, e ele nem sabia por onde começar.",
+   "min": 4.5
   },
   {
-   "cena": "cliente_conta",
-   "fala": "O cliente sorriu e contou: eu uso a Kosta. Eles me mandam material pra divulgar, e ainda me ensinam a fazer meus próprios posts.",
-   "selo": {
-    "n": 1,
-    "txt": "O convite"
-   }
-  },
-  {
-   "cena": "kosta_logo",
-   "fala": "A Kosta é uma empresa de criação com inteligência artificial. Sob medida, e mais acessível que uma agência.",
-   "selo": {
-    "n": 2,
-    "txt": "A Kosta"
-   }
-  },
-  {
-   "cena": "kosta_servicos",
-   "fala": "Faz conteúdo, imagens pras redes, imagens a partir de banco de dados, e vídeo.",
-   "selo": {
-    "n": 2,
-    "txt": "A Kosta"
-   },
-   "min": 6.2
-  },
-  {
-   "cena": "zap_alinhamento",
-   "fala": "O Léo chamou no WhatsApp. Quem respondeu foi o próprio dono. Conversaram, alinharam tudo, e começaram na mesma semana.",
-   "selo": {
-    "n": 2,
-    "txt": "A Kosta"
-   }
-  },
-  {
-   "cena": "entregas",
-   "fala": "Em poucos dias, chegaram os primeiros materiais, prontos pra postar.",
-   "selo": {
-    "n": 3,
-    "txt": "Passo a passo"
-   }
-  },
-  {
-   "cena": "passo_prompt",
-   "fala": "Aí veio o passo a passo. Primeiro: descrever a ideia, o prompt. Segundo: a IA gera a imagem.",
-   "selo": {
-    "n": 3,
-    "txt": "Passo a passo"
-   },
+   "cena": "r_conta",
+   "fala": "O cliente explicou: ele tem uma empresa que cria posts com IA, pra gente como o Léo, com negócio pequeno e sem tempo.",
    "min": 7
   },
   {
-   "cena": "passo_final",
-   "fala": "Terceiro: ajustar com a identidade da barbearia. Quarto: texto, preço, e publicar.",
-   "selo": {
-    "n": 3,
-    "txt": "Passo a passo"
-   },
-   "min": 7
+   "cena": "site_resultados",
+   "fala": "É a Kosta. Olha o que a gente entrega pros clientes.",
+   "min": 5.5
   },
   {
-   "cena": "gestao",
-   "fala": "Hoje o Léo cria os próprios conteúdos, e a Kosta apoia: calendário, legendas e a gestão das redes.",
-   "selo": {
-    "n": 4,
-    "txt": "Resultados"
-   }
+   "cena": "r_contrata",
+   "fala": "O Léo contratou ali mesmo, e começaram na mesma semana.",
+   "min": 5
   },
   {
-   "cena": "semanas_lux",
-   "fala": "Em poucas semanas, o perfil saiu do zero. Curtidas todo dia, e seguidores subindo.",
-   "selo": {
-    "n": 4,
-    "txt": "Resultados"
-   }
+   "cena": "r_diario",
+   "fala": "Todo dia, o celular do Léo vibrava: post da barbearia publicado.",
+   "min": 5
   },
   {
-   "cena": "fila_nova",
-   "fala": "E a barbearia? Agenda cheia, e tempo pra cortar cabelo.",
-   "selo": {
-    "n": 4,
-    "txt": "Resultados"
-   }
+   "cena": "foto_base",
+   "fala": "O Léo mandou fotos tortas da barbearia, e a Kosta devolveu posts profissionais, com a identidade dele.",
+   "min": 6.5
   },
   {
-   "cena": "cta_kosta",
-   "fala": "Quer aparecer todo dia, sem perder tempo? Comenta Kosta.",
-   "selo": {
-    "n": 5,
-    "txt": "Sua vez"
-   },
-   "min": 3.4
+   "cena": "perfil_cresce",
+   "fala": "E o perfil foi crescendo aos poucos: dez seguidores novos num dia, trinta no outro.",
+   "min": 5.5
+  },
+  {
+   "cena": "r_clientepost",
+   "fala": "Depois de uma semana, um cliente novo sentou na cadeira: Vi o post de vocês e quis conhecer.",
+   "min": 5
+  },
+  {
+   "cena": "r_dono",
+   "fala": "Um mês depois, o dono voltou. E dessa vez foi o Léo quem não parava de falar: já são mais de mil seguidores e a agenda tá cheia!",
+   "min": 6
+  },
+  {
+   "cena": "r_mais",
+   "fala": "O Léo perguntou: dá pra fazer vídeo também? O dono respondeu: dá. E dá pra ir bem mais longe.",
+   "min": 6
+  },
+  {
+   "cena": "r_cta",
+   "fala": "E eu nem precisei virar designer. Quer produzir conteúdo assim, e muito mais? Comenta Kosta.",
+   "min": 6
   }
  ]
 }
