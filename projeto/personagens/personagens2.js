@@ -43,14 +43,14 @@ const leo = (o = {}) => pessoa({ t: 0, ...o });
 const dono = (o = {}) => pessoa({ pele: '#B77A53', cabelo: '#141414', barba: false, oculos: true, terno: true, camisa: '#F9FAFB', calca: '#1B1B1F', avental: null, ...o });
 
 // Cliente sentado com capa, de frente. corte 0..1 = quanto do cabelo já foi cortado.
-function clienteCapa({ cor = '#64748B', pele = '#D9A06F', cabelo = '#3B2A22', corte = 0, mood = 'normal', bob = 0, giro = 0 } = {}) {
+function clienteCapa({ oculos = false, cor = '#64748B', pele = '#D9A06F', cabelo = '#3B2A22', corte = 0, mood = 'normal', bob = 0, giro = 0 } = {}) {
   const alt = 20 - corte * 10;
   return `<svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" overflow="visible"><g transform="translate(0 ${bob})">
   <path d="M30 100 Q80 86 130 100 L150 196 H10Z" fill="${cor}"/><path d="M30 100 Q80 86 130 100 L124 120 Q80 108 36 120Z" fill="#fff" opacity=".18"/>
   <g transform="rotate(${giro} 80 70)"><circle cx="80" cy="62" r="40" fill="${pele}"/><circle cx="40" cy="64" r="8" fill="${pele}"/><circle cx="120" cy="64" r="8" fill="${pele}"/>
   <path d="M40 58 Q40 ${14 - 0} 80 ${14 + (1 - corte) * 0} Q120 ${14} 120 58 Q112 ${34 + corte * 6} 80 ${32 + corte * 6} Q48 ${34 + corte * 6} 40 58Z" fill="${cabelo}" transform="translate(0 ${corte * 6}) scale(1 ${1 - corte * .35})" transform-origin="80 58"/>
   <ellipse cx="66" cy="66" rx="4" ry="4" fill="#1F1512"/><ellipse cx="94" cy="66" rx="4" ry="4" fill="#1F1512"/>
-  <path d="${mood === 'feliz' ? 'M66 82 Q80 94 94 82' : 'M68 84 Q80 88 92 84'}" stroke="#5B2B22" stroke-width="4" fill="none" stroke-linecap="round"/></g></g></svg>`;
+  ${oculos ? '<circle cx="66" cy="66" r="11" fill="#ffffff22" stroke="#141414" stroke-width="3"/><circle cx="94" cy="66" r="11" fill="#ffffff22" stroke="#141414" stroke-width="3"/><path d="M77 66H83" stroke="#141414" stroke-width="3"/>' : ''}<path d="${mood === 'feliz' ? 'M66 82 Q80 94 94 82' : 'M68 84 Q80 88 92 84'}" stroke="#5B2B22" stroke-width="4" fill="none" stroke-linecap="round"/></g></g></svg>`;
 }
 // Cliente de corpo inteiro andando
 function clienteAndando({ cor = '#2563EB', calca = '#1F2937', pele = '#D9A06F', cabelo = '#3B2A22', perna = 0, bob = 0, mood = 'normal' } = {}) {
