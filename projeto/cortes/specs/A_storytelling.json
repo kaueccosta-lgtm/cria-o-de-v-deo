@@ -1,0 +1,53 @@
+{
+ "nome": "A_storytelling_oracao_especifica",
+ "trechos": [
+  {
+   "de": "Você já orou por algo",
+   "ate": "e nada aconteceu",
+   "dica": 0,
+   "dica_fim": 6
+  },
+  {
+   "de": "a sensação de que suas orações",
+   "ate": "falando pra ninguém",
+   "dica": 26,
+   "dica_fim": 31
+  },
+  {
+   "de": "E se o problema não for",
+   "ate": "na oração",
+   "dica": 70,
+   "dica_fim": 78
+  },
+  {
+   "de": "ele dizia uma oração vaga",
+   "ate": "não transforma nada",
+   "dica": 84,
+   "dica_fim": 96
+  },
+  {
+   "de": "Wesley tinha um diário de oração",
+   "ate": "especificidade cirúrgica",
+   "dica": 368,
+   "dica_fim": 381
+  },
+  {
+   "de": "Escreva cinco pedidos específicos",
+   "ate": "por 30 dias",
+   "dica": 420,
+   "dica_fim": 427
+  }
+ ],
+ "cenas": [
+  "praying hands dark",
+  "candle flame",
+  "rain window sad",
+  "dark storm clouds",
+  "old holy bible",
+  "fog forest light rays",
+  "old diary writing pen",
+  "ink pen paper writing",
+  "sunrise mountain clouds",
+  "cross sunset silhouette"
+ ]
+}
