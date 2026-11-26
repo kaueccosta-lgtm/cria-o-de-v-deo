@@ -29,9 +29,13 @@ exc = []; cursor = 0; cum = 0.0; todas = []
 for e in spec['trechos']:
     i0 = find(e['de'], 0, e['dica']); j0 = find(e['ate'], i0, e.get('dica_fim')); j1 = j0 + len(e['ate'].split()) - 1
     t0 = max(words[i0 - 1][1] if i0 else 0, words[i0][0] - .12); t1 = words[j1][1] + .30
+    if t1 - t0 > 75: sys.exit(f'trecho longo demais ({t1 - t0:.0f}s): confira as frases de início e fim: {e["de"]!r} … {e["ate"]!r}')
     ws = [(cum + (w[0] - t0), cum + (w[1] - t0), w[2]) for w in words[i0:j1 + 1]]
     exc.append((t0, t1, cum)); todas += ws; cum += (t1 - t0) + .15
     print(f'  trecho {t0:7.1f}-{t1:7.1f}s ({t1 - t0:4.1f}s): {" ".join(w[2] for w in words[i0:i0 + 6])} … {" ".join(w[2] for w in words[j1 - 3:j1 + 1])}')
+for k in range(len(todas) - 2):                       # correção de contexto: "falta de especificar a oração"
+    if norm(todas[k][2]) == 'especificar' and norm(todas[k + 1][2]) == 'a' and norm(todas[k + 2][2]) == 'oracao':
+        todas[k] = (todas[k][0], todas[k][1], 'especificidade'); todas[k + 1] = (todas[k + 1][0], todas[k + 1][1], 'na')
 T = cum + .45; print(f'duração total {T:.1f}s')
 
 # 2) áudio
